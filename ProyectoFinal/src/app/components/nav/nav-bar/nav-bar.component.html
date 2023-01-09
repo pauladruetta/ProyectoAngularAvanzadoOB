@@ -1,0 +1,8 @@
+<div class="toolbar" role="banner">
+  <span>Ejemplo Angular: Amigo Invisible </span>
+  <button *ngIf="isToken || true" (click)="logout()">Logout</button>
+  <a *ngIf="!token" routerLink="/login">Inciar Sesión</a>
+</div>
+
+
+<!--FIXME: debería aparecer logout sin tener que recargar la página -->

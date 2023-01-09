@@ -1,0 +1,20 @@
+<h1>Tus Contactos:</h1>
+
+<app-lista-contactos [listaContactos]="listaRandomContacts" [filtro]="filtroSexo" (enviar)="volverAHome($event)"></app-lista-contactos>
+
+<ng-container *ngIf="filtroSexo == 'female' || filtroSexo == 'male'; else noFiltro">
+  <p>Mostrando Lista filtrado por: "{{filtroSexo}}" </p>
+</ng-container>
+
+<ng-template #noFiltro>
+  <p>Mostrando lista de contactos completa</p>
+</ng-template>
+
+<!-- <div>
+  <p>Filtros</p>
+  <a [routerLink]="['/contactos']" [queryParams]="{sexo: 'female'}">Amigas |</a>
+  <a [routerLink]="['/contactos']" [queryParams]="{sexo: 'male'}">| Amigos</a>
+</div> -->
+
+<a [routerLink]="['/home']">| volver</a>
+
