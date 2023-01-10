@@ -7,8 +7,14 @@
     <ng-container *ngIf="todoTask.length ===0">
       <h4 class="msg-enhorabuena">¡Enoharabuena! No tienes tareas pendientes. Puedes irte a casa</h4>
     </ng-container>
-      <div [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of todoTask" cdkDrag>
-      <app-task [task]="task"></app-task>
+      <div
+        [ngClass]="{'completed-task': task.completed}"
+        class="list-item"
+        appMouseHover="tomato" defaultColor="green"
+        *ngFor="let task of todoTask"
+        cdkDrag
+      >
+      <app-task appLifeCycle [task]="task"></app-task>
       </div>
     </div>
 
@@ -20,8 +26,14 @@
     <ng-container *ngIf="doneTask.length ===0">
       <h4 class="msg-trabajar">No tienes tareas completadas. Debes ponerte las pilas</h4>
     </ng-container>
-    <div [ngClass]="{'completed-task': task.completed}" class="list-item" *ngFor="let task of doneTask" cdkDrag>
-      <app-task [task]="task"></app-task>
+    <div
+      [ngClass]="{'completed-task': task.completed}"
+      class="list-item"
+      appMouseHover="lightgreen" defaultColor="lightgreen"
+      *ngFor="let task of doneTask"
+      cdkDrag
+    >
+      <app-task appLifeCycle [task]="task"></app-task>
     </div>
   </div>
 </div>

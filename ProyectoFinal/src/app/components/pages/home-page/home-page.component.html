@@ -1,10 +1,6 @@
 <h1>Juego del Amigo Invisible</h1>
 <h3>¡Bienvenido!</h3>
 
-<app-task-list></app-task-list>
-
-<app-task-form></app-task-form>
-
 <ng-container *ngIf="contactoSeleccionado; else noSeleccionado">
   <h4 >Tu Amigo Invisible es: {{contactoSeleccionado.name.first}}</h4>
 </ng-container>

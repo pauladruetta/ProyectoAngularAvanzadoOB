@@ -64,6 +64,7 @@ export class KanbanTasksComponent {
 
       event.previousContainer.data[event.previousIndex].completed = !event.previousContainer.data[event.previousIndex].completed
 
+
       transferArrayItem(event.previousContainer.data,
           event.container.data,
           event.previousIndex,
