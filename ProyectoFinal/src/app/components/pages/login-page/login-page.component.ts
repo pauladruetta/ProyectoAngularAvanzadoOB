@@ -27,7 +27,7 @@ export class LoginPageComponent implements OnInit {
       (response) => {
         console.info(response)
         this.tokenService.setToken(response.token)
-        this.router.navigate(['home'])
+        this.router.navigate(['dashboard'])
       },
       (error) => {
         console.error(`Ha ocurrido un error al hacer login ${error}`)
